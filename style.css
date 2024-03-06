@@ -1,6 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #bfbfbf #ffffff;
+    cursor: url(cursor/icons8-cursor-36.png), auto;
+}
+
+*::-webkit-scrollbar {
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
 :root {
     --ff-inter: "Inter", sans-serif;
     --ff-sansSofia: "Sofia Sans", sans-serif;
@@ -19,7 +40,7 @@ html {
 }
 
 body { 
-    background: var(--bc-appleWhit);
+    background: var(--bc-appleWhite);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -27,7 +48,8 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     max-width: 100%;
     padding: 0;
@@ -51,9 +73,9 @@ body {
     margin-inline: 0;
     padding-inline: 1.5rem;
 }
-  
+
 .navbar>.navbar-list>li>a {
-    color: var(--c-white);
+    color: #fff;
     font-family: var(--ff-inter);
     text-decoration: none;
 }
@@ -69,29 +91,54 @@ body {
 @media (max-width: 802px) {
     .navbar-list {
         display: none;
+        flex-direction: column;
+        margin-block: 0;
+        top: 0;
+        bottom: 0;
+        background: #2F2F2F;
+        width: 100%;
+        padding: 1.5rem 0;
+        margin-top: 3rem;
     }
+
+    .navbar>.navbar-list.show {
+        display: flex;
+        position: absolute;
+        align-items: center;
+    }
+
     .hamburger {
         display: inline-block;
         margin-inline: auto;
-        cursor: pointer;
         padding-block: 0.4rem;
     }
+
     .bar1, .bar2, .bar3 {
         width: 35px;
         height: 5px;
-        background: var(--bc-appleWhite);
+        background: #fff;
         margin-block: 6px;
-        /* transition: 0.1s; */
+        transition: 0.25s;
     }
+
     .change .bar1 {
         transform: translate(0, 11px) rotate(-45deg);
     } 
+
     .change .bar2 {
         opacity: 0;
     }
+
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
+}
+
+.main{
+    border: 1px solid #6f92ff;
+    margin-inline: auto;
+    width: 100%;
+    height: 45rem;
 }
 
 .footer{
@@ -99,7 +146,6 @@ body {
     justify-content: center;
     bottom: 0;
     left: 0;
-    position: absolute;
     width: 100%;
     background: #F4F4F4;
 }
@@ -125,7 +171,7 @@ footer>ul>li>.innerUl{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 0;
     padding: 0;
     margin-block: 1rem
