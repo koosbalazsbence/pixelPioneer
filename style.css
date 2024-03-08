@@ -7,6 +7,7 @@
     user-select: none;
     scrollbar-width: thin;
     scrollbar-color: #bfbfbf #ffffff;
+    cursor: url('cursor/icons8-cursor.svg'), auto
 }
 
 *::-webkit-scrollbar {
@@ -35,7 +36,6 @@
 html {
     width: 100vw;
     height: 100%;
-    /* cursor: url(cursor/icons8-cursor-36.png), auto;  */
     scroll-behavior: smooth;
 }
 
@@ -193,7 +193,7 @@ h1{
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
-    color: #dbdbdb;
+    color: var(--bc-appleWhite);
     text-decoration: none;
 }
 
