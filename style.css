@@ -7,7 +7,7 @@
     user-select: none;
     scrollbar-width: thin;
     scrollbar-color: #bfbfbf #ffffff;
-    cursor: url('cursor/icons8-cursor.svg'), auto
+    /* cursor: url('cursor/icons8-cursor.svg'), auto */
 }
 
 *::-webkit-scrollbar {
@@ -45,10 +45,32 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #1d88df;
+    font-family: var(--ff-notoSansLao);
+    color: var(--bc-appleWhite);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #0c3480;
+  }
 
 .navbar {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0;
     max-width: 100%;
@@ -99,6 +121,8 @@ body {
         width: 100%;
         padding: 1.5rem 0;
         margin-top: 3rem;
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
     }
 
     .navbar>.navbar-list.show {
