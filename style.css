@@ -255,7 +255,6 @@ h1{
     box-shadow: 0 20px 20px -20px #747474;
     margin: -50px auto 10px;
 }
-
 h2{
     font-size: 2.5rem;
 }
@@ -274,7 +273,7 @@ h2{
     justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
-    padding: 1rem;
+    margin: 0;
 }
 .refworkInner>.boxFirst,.boxSecond,.boxThird{
     display: flex;
@@ -320,6 +319,8 @@ h2{
     overflow: hidden;
 }
 .refworksMainDiv{
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -345,6 +346,17 @@ iframe{
     height: 300px;
     border: 0;
     border-radius: 15px;;
+}
+
+#contact{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+}
+.contactInner{
+    background: #F8F8F8;
+    width: 1000px;
+    height: 750px;
 }
 
 .footer{
