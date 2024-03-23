@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Vissza a tetejére" class='fas fa-angle-up'><img src="media/smlogos/up-arrow.png" alt="upArrow"></button>
-
     <div class="navbar">
         <ul class="navbar-list navbar-collapsed" onclick="hamburgerIcon(this)">
             <li><a href="#main">Főoldal</a></li>
@@ -27,14 +25,26 @@
     
     <div class="container-fluid">
         <section class="main" id="main">
+            <div class="imagesFirst">
+                <img src="media/html.png" alt="" id="html">
+                <img src="media/php.png" alt="" id="php">
+                <img src="media/node-js.png" alt="" id="node-js">
+                <img src="media/python.png" alt="" id="python">
+            </div>
             <div class="mainInner">
-                <h1 class="typewrite" data-period="2000" data-type='["Szakértelem", "Kreativitás", "Minőség", "Megbízhatóság", "Folyamatos fejlődés"]'>
+                <!-- <h1 class="typewrite" data-period="2000" data-type='["Szakértelem", "Kreativitás", "Minőség", "Megbízhatóság", "Folyamatos fejlődés"]'>
                     <span class="wrap"></span>
-                </h1>
+                </h1> -->
                 <h2>Koós Balázs Bence</h2>
                 <h3>Szoftverfejlesztő és-tesztelő</h3>
-                <p>Üdvözöllek a weboldalamon! Tapasztalt <b>UI tervező</b> és <b>Front-End fejlesztő</b> vagyok, modern és <b>reszponzív</b> dizájnokat készítek <b>webes és mobil platformokra</b> egyaránt. Dolgozzunk együtt! Köszönöm a bizalmad!</p>
-                <button class="beginButton" onclick="window.location.href='#introduce'"><span>Kezdjük</span></button>
+                <p>Üdvözöllek a weboldalamon! Tapasztalt <b>UI tervező</b> és <b>Front-End és Back-End fejlesztő</b> vagyok, modern és <b>reszponzív</b> dizájnokat készítek <b>webes és mobil platformokra</b> egyaránt. Arra törekszem, hogy a weboldalaim rendre <b>ízlésesek</b> és <b>modernek</b> legyenek, illetve, hogy <b>nyerjék el a felhasználók tetszését</b>. Dolgozzunk együtt! Köszönöm a bizalmad!</p>
+                <button class="beginButton" onclick="window.location.href='#introduce'"><span>Kezdjük!</span></button>
+            </div>
+            <div class="imagesSecond">
+                <img src="media/mysql.png" alt="" id="mysql">
+                <img src="media/css-3.png" alt="" id="css">
+                <img src="media/React-icon.png" alt="" id="react">
+                <img src="media/js.png" alt="" id="js">
             </div>
         </section>
         <section class="introduce" id="introduce">
@@ -73,7 +83,7 @@
             <h2>Elérhetőség</h2>
             <div class="contactInner">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.8786590242607!2d21.176747762870285!3d47.01528780021328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47469285b7b65005%3A0x9e274fe66b3683c1!2sSzigeti%20Endre%20Iskola!5e0!3m2!1shu!2shu!4v1709831750246!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14512.527559730297!2d165.96255607391126!3d-50.6063186864139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9b37960d3cdddd7%3A0xbd1bca4ab10f2187!2sDisappointment%20Island!5e1!3m2!1shu!2shu!4v1711218768754!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -87,11 +97,11 @@
                 <li>contact@koosbalazsbence.com</li>
                 <li>
                     <ul class="innerUl">
-                        <li><a href=""><img src="media/smlogos/facebook.png" alt="" title=""></a></li>
-                        <li><a href=""><img src="media/smlogos/instagram.png" alt="" title=""></a></li>
-                        <li><a href=""><img src="media/smlogos/twitter.png" alt="" title=""></a></li>
-                        <li><a href=""><img src="media/smlogos/youtube.png" alt="" title=""></a></li>
-                        <li><a href=""><img src="media/smlogos/discord.png" alt="" title=""></a></li>
+                        <li><a href="https://www.facebook.com/koos.balazs.58"><img src="media/smlogos/facebook.png" alt="" title=""></a></li>
+                        <li><a href="https://www.instagram.com/koosbalazsbence/"><img src="media/smlogos/instagram.png" alt="" title=""></a></li>
+                        <li><a href="https://twitter.com/koosbalazsbence"><img src="media/smlogos/twitter.png" alt="" title=""></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCRVIBsj-16w5Bj6edtGA9Pg"><img src="media/smlogos/youtube.png" alt="" title=""></a></li>
+                        <li><a href="https://discord.com/users/1155139743839961260"><img src="media/smlogos/discord.png" alt="" title=""></a></li>
                         <li><a href="https://github.com/koosbalazsbence" target="_blank"><img src="media/smlogos/github.png" alt="" title=""></a></li>
                     </ul>
                 </li>
@@ -99,6 +109,7 @@
             </ul>
         </footer>   
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Vissza a tetejére" class='fas fa-angle-up'><img src="media/smlogos/up-arrow.png" alt="upArrow"></button>
     <script src="script.js"></script>
 </body>
 </html>

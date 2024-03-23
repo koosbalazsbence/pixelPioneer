@@ -59,3 +59,56 @@ function topFunction() {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
 }
+
+
+/*
+    Elements scroll behavior 
+*/
+
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    let moveAmount = 10;
+
+    let offsetsFirst = {
+        '#html': -value * 0.5,
+        '#php': -value * 0.5,
+        '#node-js': -value * 0.3,
+        '#python': -value * 0.4
+    }
+
+    let offsetsSecond = {
+        '#mysql': value * 0.4,
+        '#css': value * 0.4,
+        '#react': value * 0.5,
+        '#js': value * 0.5
+    }
+
+    for (let selector in offsetsFirst) {
+        let offset = offsetsFirst[selector]
+        let element = document.querySelector('.imagesFirst ' + selector)
+        element.style.transform = 'translateX(' + (offset + moveAmount) + 'px)'
+    }
+
+    for (let selector in offsetsSecond) {
+        let offset = offsetsSecond[selector]
+        let element = document.querySelector('.imagesSecond ' + selector)
+        element.style.transform = 'translateX(' + (offset + moveAmount) + 'px)'
+    }
+})
+
+
+window.addEventListener('scroll', function() {
+    let element = document.querySelector('.main')
+    let position = element.getBoundingClientRect()
+    let windowHeight = window.innerHeight
+    
+    parseFloat(window.getComputedStyle(element).getPropertyValue('opacity'))
+
+    if (position.bottom < 0 || position.top > windowHeight) {
+        element.style.opacity = 1
+        return
+    }
+    let distanceToWindow = Math.min(position.bottom, windowHeight) - Math.max(position.top, 0)
+    let newOpacity = distanceToWindow / windowHeight
+    element.style.opacity = newOpacity
+})
