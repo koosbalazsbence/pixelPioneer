@@ -1,3 +1,3 @@
 # pixelPioneer
  PixelPioneer
-[Link](https://koosbalazsbence.github.io/pixelPioneer/#introduce)
+[Link](https://koosbalazsbence.github.io/pixelPioneer)
